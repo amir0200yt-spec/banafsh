@@ -403,66 +403,77 @@ a{
     border: solid var(--Purple);
     border-radius: 50%;
 }
-@media only screen and (max-width:768px)
-{
-    .footer{
-        flex-direction: column;
-        
-    }
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
 
-    .contact-us, .form{
-        width: 80%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-right: 30px;
-    }
-    .contact-us{
-        margin-bottom: 2rem;
+.buttom-purple:hover,
+.buttom-yellow:hover {
+    background-color: var(--White);
+}
+
+/* MENU */
+.menu-items {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+@media (max-width: 992px) {
+    .menu-items {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
-@media only screen and (max-width:768px)
-{
-    .footer{
-        flex-direction: column;
-        
-    }
 
-    .contact-us, .form{
-        width: 80%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-right: 30px;
-    }
-    .contact-us{
-        margin-bottom: 2rem;
+@media (max-width: 600px) {
+    .menu-items {
+        grid-template-columns: 1fr;
     }
 }
-@media only screen and (max-width: 992px)
-{
-    .about-us {
-        flex-direction: column;
-        padding: 2rem 0;
-    }
 
+/* COMMENTS */
+.comment-items {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 0 2rem;
+}
 
-    .about-us-image,.about-us-text{
-    width: 90%;
-    
-}
-}
-@media only screen and (max-width: 992px)
-{
+@media (max-width: 992px) {
     .comment-items {
-        grid-template-columns: 30% 30%;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
-@media only screen and (max-width: 600px)
-{
-    .comment-items{
-        grid-template-columns: 50%;
+
+@media (max-width: 600px) {
+    .comment-items {
+        grid-template-columns: 1fr;
     }
+}
+
+/* FOOTER FIX */
+.contact-us, .form {
+    margin: 0 auto;
+}
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.container, .menu, .comments, .about-us, .footer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    box-sizing: border-box;
+}
+
+.menu-items,
+.comment-items {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
